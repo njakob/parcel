@@ -22,7 +22,7 @@ export type Repository = {
 };
 
 export type Parcel = {
-  name: Name;
+  name: ?Name;
   author: ?Member;
   contributors: Array<?Member>;
   description: ?string;

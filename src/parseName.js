@@ -2,11 +2,19 @@
 
 import type { Name } from './common';
 
-export default function parseName(value: any): Name {
-  const [, scope, name] = /^(@.+\/)?(.+)$/.exec(value);
+export default function parseName(value: any): ?Name {
+  if (!value) {
+    return null;
+  }
 
-  return {
-    scope,
-    name,
-  };
+  const matches = /^(?:(@.+)\/)?(.+)$/.exec(value);
+  if (matches) {
+    const [, scope, name] = matches;
+    return {
+      scope,
+      name,
+    };
+  }
+
+  return null;
 }
