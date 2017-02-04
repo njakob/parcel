@@ -23,9 +23,16 @@ $ yarn add @njakob/parcel
 
 ## Usage
 
+```js
+import { parseParcel } from '@njakob/parcel';
+import parcel from './package.json';
+
+console.log(parseParcel(parcel));
+```
+
 ## Licences
 
-`njakob/raclette` is licensed under the [MIT License][licence].
+`njakob/parcel` is licensed under the [MIT License][licence].
 
 [licence]: LICENSE
 [eslint-config]: https://github.com/njakob/parcel
