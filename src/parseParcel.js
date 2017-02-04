@@ -8,6 +8,7 @@ import parseRepository from './parseRepository';
 export default function parseParcel({
   homepage,
   description,
+  version,
   name,
   author,
   license,
@@ -23,6 +24,7 @@ export default function parseParcel({
     keywords,
     license,
     bugs,
+    version,
     private: !!obj.private,
     name: parseName(name),
     author: parseMember(author),

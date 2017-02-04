@@ -28,6 +28,7 @@ export type Parcel = {
   description: ?string;
   private: boolean;
   homepage: ?string;
+  version: ?string;
   keywords: Array<string>;
   license: ?string;
   bugs: ?Bugs;
