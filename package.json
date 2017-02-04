@@ -25,13 +25,16 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "flow": "flow check",
-    "test": "npm run flow && npm run build",
+    "test": "ava",
+    "test:watch": "ava -w",
+    "check": "npm run lint && npm run flow && npm run test",
     "bump:major": "npm version major -m \"Bump to %s\"",
     "bump:minor": "npm version minor -m \"Bump to %s\"",
     "bump:patch": "npm version patch -m \"Bump to %s\"",
-    "prepublish": "npm run test"
+    "prepublish": "npm run check && npm run build"
   },
   "devDependencies": {
+    "ava": "^0.18.1",
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",
     "babel-plugin-module-resolver": "^2.4.0",
@@ -47,5 +50,9 @@
     "eslint-plugin-import": "^2.2.0",
     "flow-bin": "^0.37.4",
     "rimraf": "^2.5.4"
+  },
+  "ava": {
+    "require": "babel-register",
+    "babel": "inherit"
   }
 }
