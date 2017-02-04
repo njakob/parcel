@@ -2,16 +2,24 @@
 
 import type { Member } from './common';
 
-export default function parseMember(value: any): Member {
+export default function parseMember(value: any): ?Member {
   if (typeof value === 'object') {
     return value;
   }
 
-  const [, name, email, url] = /^(.+)\s+<(.+)>\s+\(.+\)$/.exec(value);
+  if (!value) {
+    return null;
+  }
 
-  return {
-    name,
-    email,
-    url,
-  };
+  const matches = /^(.*?)(?:\s<(.*)>)?(?:\s\((.*)\))?$/.exec(value);
+  if (matches) {
+    const [, name, email, url] = matches;
+    return {
+      name,
+      email,
+      url,
+    };
+  }
+
+  return null;
 }

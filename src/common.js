@@ -24,7 +24,7 @@ export type Repository = {
 export type Parcel = {
   name: Name;
   author: ?Member;
-  contributors: Member[];
+  contributors: ?Member[];
   description: ?string;
   private: boolean;
   homepage: ?string;
