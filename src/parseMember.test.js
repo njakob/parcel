@@ -1,7 +1,7 @@
 import test from 'ava';
 import parseMember from './parseMember';
 
-test('empty string', (t) => {
+test('empty name', (t) => {
   t.deepEqual(parseMember(''), null);
   t.pass();
 });
