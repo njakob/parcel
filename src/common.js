@@ -1,14 +1,14 @@
 /* @flow */
 
 export type Name = {
-  scope: string;
-  name: string;
+  scope: ?string;
+  name: ?string;
 };
 
 export type Member = {
-  name: string;
-  email: string;
-  url: string;
+  name: ?string;
+  email: ?string;
+  url: ?string;
 };
 
 export type Bugs = {

@@ -13,7 +13,8 @@ export default function parseMember(value: any): ?Member {
 
   const matches = /^(.*?)(?:\s<(.*)>)?(?:\s\((.*)\))?$/.exec(value);
   if (matches) {
-    const [, name, email, url] = matches;
+    // $FlowFixMe
+    const [, name = null, email = null, url = null] = matches;
     return {
       name,
       email,

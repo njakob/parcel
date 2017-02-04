@@ -8,7 +8,7 @@ test('empty name', (t) => {
 
 test('unscoped name', (t) => {
   t.deepEqual(parseName('parcel'), {
-    scope: undefined,
+    scope: null,
     name: 'parcel',
   });
   t.pass();

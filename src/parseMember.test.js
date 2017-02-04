@@ -9,8 +9,8 @@ test('empty name', (t) => {
 test('name only', (t) => {
   t.deepEqual(parseMember('John'), {
     name: 'John',
-    email: undefined,
-    url: undefined,
+    email: null,
+    url: null,
   });
   t.pass();
 });
@@ -19,7 +19,7 @@ test('name with email', (t) => {
   t.deepEqual(parseMember('John <john@nobody.test>'), {
     name: 'John',
     email: 'john@nobody.test',
-    url: undefined,
+    url: null,
   });
   t.pass();
 });

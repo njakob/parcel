@@ -9,7 +9,8 @@ export default function parseName(value: any): ?Name {
 
   const matches = /^(?:(@.+)\/)?(.+)$/.exec(value);
   if (matches) {
-    const [, scope, name] = matches;
+    // $FlowFixMe
+    const [, scope = null, name = null] = matches;
     return {
       scope,
       name,
