@@ -24,11 +24,11 @@ export type Repository = {
 export type Parcel = {
   name: Name;
   author: ?Member;
-  contributors: ?Member[];
+  contributors: Array<?Member>;
   description: ?string;
   private: boolean;
   homepage: ?string;
-  keywords: string[];
+  keywords: Array<string>;
   license: ?string;
   bugs: ?Bugs;
   repository: ?Repository;
