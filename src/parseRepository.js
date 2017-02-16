@@ -2,7 +2,11 @@
 
 import type { Repository } from './common';
 
-export default function parseRepository(value: any): Repository {
+export default function parseRepository(value: any): ?Repository {
+  if (!value) {
+    return null;
+  }
+
   if (typeof value === 'object') {
     return value;
   }
