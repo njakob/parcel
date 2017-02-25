@@ -1,6 +1,6 @@
 {
   "name": "@njakob/parcel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "NPM package parser",
   "author": "Nicolas Jakob <nicow.jakob@gmail.com>",
   "license": "MIT",
