@@ -1,5 +1,5 @@
 
-# parcel [![Build Status][build-status-image]][travis] [![ESLint Config][eslint-config-image]][eslint-config]
+# parcel [![NPM version][badge:npm-status]][npm] [![Build Status][badge:build-status]][travis] [![ESLint Config][badge:eslint-config]][github:njakob/eslint-config] [![Conventional Commits][badge:conventional-commits]][conventional-commits]
 
 > NPM package parser.
 
@@ -35,9 +35,11 @@ console.log(parseParcel(parcel));
 `njakob/parcel` is licensed under the [MIT License][licence].
 
 [licence]: LICENSE
-[eslint-config]: https://github.com/njakob/parcel
-[npm]: https://nodei.co/npm/@njakob/parcel
+[github:njakob/eslint-config]: https://github.com/njakob/parcel
 [travis]: https://travis-ci.org/njakob/parcel
-[npm-status-image]: https://img.shields.io/npm/v/@jakob/parcel.svg
-[build-status-image]: https://travis-ci.org/njakob/parcel.svg?branch=master
-[eslint-config-image]: https://img.shields.io/badge/eslint_config-njakob-463fd4.svg
+[npm]: https://nodei.co/npm/@njakob/parcel
+[conventional-commits]: https://conventionalcommits.org
+[badge:npm-status]: https://img.shields.io/npm/v/@njakob/parcel.svg
+[badge:build-status]: https://travis-ci.org/njakob/parcel.svg?branch=master
+[badge:eslint-config]: https://img.shields.io/badge/eslint_config-njakob-463fd4.svg
+[badge:conventional-commits]: https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg
