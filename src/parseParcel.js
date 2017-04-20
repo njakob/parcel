@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Parcel } from './common';
+import type { Parcel } from './types';
 import parseName from './parseName';
 import parseMember from './parseMember';
 import parseRepository from './parseRepository';

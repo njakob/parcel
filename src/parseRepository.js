@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Repository } from './common';
+import type { Repository } from './types';
 
 export default function parseRepository(value: any): ?Repository {
   if (!value) {

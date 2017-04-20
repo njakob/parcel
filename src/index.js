@@ -6,5 +6,5 @@ export type {
   Name,
   Repository,
   Bugs,
-} from './common';
+} from './types';
 export { default as parseParcel } from './parseParcel';

@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Member } from './common';
+import type { Member } from './types';
 
 export default function parseMember(value: any): ?Member {
   if (typeof value === 'object') {

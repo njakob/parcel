@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Name } from './common';
+import type { Name } from './types';
 
 export default function parseName(value: any): ?Name {
   if (!value) {
