@@ -1,18 +1,7 @@
 {
   "presets": [
     "stage-0",
-    "es2015"
-  ],
-  "plugins": [
-    "syntax-flow",
-    "transform-flow-strip-types",
-    [
-      "module-resolver", {
-        "root": ["./src"],
-        "alias": {
-          "package.json": "./package.json"
-        }
-      }
-    ]
+    "es2015",
+    "flow"
   ]
 }
