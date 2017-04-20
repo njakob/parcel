@@ -21,15 +21,17 @@
   "main": "./lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
-    "build": "npm run clean && babel src -d lib --ignore '*.test.js' && flow gen-flow-files --out-dir lib src/index.js",
-    "lint": "eslint .",
+    "build:flow": "flow gen-flow-files --out-dir lib src/index.js",
+    "build:sources": "babel src -d lib --ignore '*.test.js'",
+    "build": "npm run clean && npm run build:sources && npm run build:flow",
     "lint:fix": "eslint --fix .",
+    "lint": "eslint .",
     "flow": "flow check",
-    "test": "ava",
-    "test:watch": "ava -w",
-    "validate": "npm run lint && npm run flow && npm run test",
+    "ava:watch": "ava -w",
+    "ava": "ava",
+    "test": "npm run lint && npm run flow && npm run ava",
     "release": "standard-version",
-    "prepublish": "npm run validate && npm run build"
+    "prepublish": "npm run test && npm run build"
   },
   "devDependencies": {
     "ava": "^0.18.1",
