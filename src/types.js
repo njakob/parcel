@@ -21,6 +21,11 @@ export type Repository = {
   url: string;
 };
 
+export type Dependency = {
+  name: ?Name;
+  version: string;
+};
+
 export type Parcel = {
   name: ?Name;
   author: ?Member;
@@ -33,4 +38,8 @@ export type Parcel = {
   license: ?string;
   bugs: ?Bugs;
   repository: ?Repository;
+  dependencies: Array<Dependency>,
+  devDependencies: Array<Dependency>,
+  peerDependencies: Array<Dependency>,
+  bundledDependencies: Array<Dependency>,
 };
