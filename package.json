@@ -5,10 +5,7 @@
   "author": "Nicolas Jakob <nicow.jakob@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/njakob/parcel",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/njakob/parcel.git"
-  },
+  "repository": "njakob/parcel",
   "bugs": {
     "url": "https://github.com/njakob/parcel/issues"
   },
