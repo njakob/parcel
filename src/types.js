@@ -2,7 +2,7 @@
 
 export type Name = {
   scope: ?string;
-  name: ?string;
+  name: string;
 };
 
 export type Member = {

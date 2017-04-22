@@ -2,7 +2,7 @@
 
 import type { Repository } from './types';
 
-const REGEXP = /^(?:(.+):)?(.+)$/;
+const regexp = /^(?:(.+):)?(.+)$/;
 
 export default function parseRepository(value: Object | string): ?Repository {
   if (!value) {
@@ -13,7 +13,7 @@ export default function parseRepository(value: Object | string): ?Repository {
     return value;
   }
 
-  const matches = REGEXP.exec(value);
+  const matches = regexp.exec(value);
 
   if (!matches) {
     return null;
