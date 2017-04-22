@@ -2,7 +2,9 @@
 
 import type { Repository } from './types';
 
-export default function parseRepository(value: any): ?Repository {
+const REGEXP = /^(?:(.+):)?(.+)$/;
+
+export default function parseRepository(value: Object | string): ?Repository {
   if (!value) {
     return null;
   }
@@ -11,27 +13,25 @@ export default function parseRepository(value: any): ?Repository {
     return value;
   }
 
-  const [, type, name] = /^(.+):+(.+)$/.exec(value);
+  const matches = REGEXP.exec(value);
 
-  let url;
-  switch (type) {
-    case 'gist':
-      url = `https://gist.github.com/${name}`;
-      break;
-    case 'bitbucket':
-      url = `https://bitbucket.org/${name}`;
-      break;
-    case 'gitlab':
-      url = `https://gitlab.com/${name}`;
-      break;
-    case 'npm':
-    default:
-      url = `https://www.npmjs.com/package/${name}`;
-      break;
+  if (!matches) {
+    return null;
   }
 
-  return {
-    type,
-    url,
-  };
+  // $FlowFixMe: parsing error
+  const [, service = '', name] = matches;
+
+  switch (service) {
+    case 'gist':
+      return { type: 'git', url: `https://gist.github.com/${name}.git` };
+    case 'bitbucket':
+      return { type: 'git', url: `https://bitbucket.com/${name}.git` };
+    case 'gitlab':
+      return { type: 'git', url: `https://gitlab.com/${name}.git` };
+    case '':
+      return { type: 'git', url: `https://github.com/${name}.git` };
+    default:
+      return null;
+  }
 }

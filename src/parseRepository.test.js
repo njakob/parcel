@@ -23,9 +23,17 @@ test('with object', (t) => {
 });
 
 test('with git string', (t) => {
-  t.deepEqual(parseRepository('npm:bugsy'), {
-    type: 'npm',
-    url: 'https://www.npmjs.com/package/bugsy',
+  t.deepEqual(parseRepository('bitbucket:njakob/test'), {
+    type: 'git',
+    url: 'https://bitbucket.com/njakob/test.git',
+  });
+  t.pass();
+});
+
+test('with github string', (t) => {
+  t.deepEqual(parseRepository('njakob/rainbow'), {
+    type: 'git',
+    url: 'https://github.com/njakob/rainbow.git',
   });
   t.pass();
 });
