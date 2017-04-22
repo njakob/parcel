@@ -30,10 +30,15 @@ import parcel from './package.json';
 console.log(parseParcel(parcel));
 ```
 
+## Changelog
+
+See [changelog][CHANGELOG].
+
 ## Licences
 
 `njakob/parcel` is licensed under the [MIT License][licence].
 
+[changelog]: CHANGELOG
 [licence]: LICENSE
 [github:njakob/eslint-config]: https://github.com/njakob/parcel
 [travis]: https://travis-ci.org/njakob/parcel
