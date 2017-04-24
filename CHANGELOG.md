@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/njakob/parcel/compare/v1.1.1...v1.2.0) (2017-04-24)
+
+
+### Features
+
+* Provide full name while parsing name fields ([0dda096](https://github.com/njakob/parcel/commit/0dda096))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/njakob/parcel/compare/v1.1.0...v1.1.1) (2017-04-22)
 
