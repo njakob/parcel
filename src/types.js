@@ -1,6 +1,7 @@
 /* @flow */
 
 export type Name = {
+  fullName: string;
   scope: ?string;
   name: string;
 };

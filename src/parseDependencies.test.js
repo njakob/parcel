@@ -10,7 +10,7 @@ test('with unscoped dependency', (t) => {
   t.deepEqual(parseDependencies({
     'eslint-config-njakob': '^4.1.0',
   }), [
-    { name: { name: 'eslint-config-njakob', scope: null }, version: '^4.1.0' }
+    { name: { fullName: 'eslint-config-njakob', name: 'eslint-config-njakob', scope: null }, version: '^4.1.0' }
   ]);
   t.pass();
 });
@@ -19,7 +19,7 @@ test('with scoped dependency', (t) => {
   t.deepEqual(parseDependencies({
     '@njakob/rainbow': '^1.0.0',
   }), [
-    { name: { name: 'rainbow', scope: '@njakob' }, version: '^1.0.0' }
+    { name: { fullName: '@njakob/rainbow', name: 'rainbow', scope: '@njakob' }, version: '^1.0.0' }
   ]);
   t.pass();
 });
@@ -29,8 +29,8 @@ test('with multiple dependencies', (t) => {
     'eslint-config-njakob': '^4.1.0',
     '@njakob/rainbow': '^1.0.0',
   }), [
-    { name: { name: 'eslint-config-njakob', scope: null }, version: '^4.1.0' },
-    { name: { name: 'rainbow', scope: '@njakob' }, version: '^1.0.0' }
+    { name: { fullName: 'eslint-config-njakob', name: 'eslint-config-njakob', scope: null }, version: '^4.1.0' },
+    { name: { fullName: '@njakob/rainbow', name: 'rainbow', scope: '@njakob' }, version: '^1.0.0' }
   ]);
   t.pass();
 });

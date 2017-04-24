@@ -8,6 +8,7 @@ test('empty name', (t) => {
 
 test('unscoped name', (t) => {
   t.deepEqual(parseName('parcel'), {
+    fullName: 'parcel',
     scope: null,
     name: 'parcel',
   });
@@ -16,6 +17,7 @@ test('unscoped name', (t) => {
 
 test('scoped name', (t) => {
   t.deepEqual(parseName('@njakob/parcel'), {
+    fullName: '@njakob/parcel',
     scope: '@njakob',
     name: 'parcel',
   });
