@@ -19,7 +19,6 @@ export default function parseRepository(value: Object | string): ?Repository {
     return null;
   }
 
-  // $FlowFixMe: parsing error
   const [, service = '', name] = matches;
 
   switch (service) {

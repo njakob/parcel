@@ -15,7 +15,6 @@ export default function parseName(value: any): ?Name {
     return null;
   }
 
-  // $FlowFixMe: parsing error due to default values
   const [fullName, scope = null, name] = matches;
 
   return { fullName, scope, name };

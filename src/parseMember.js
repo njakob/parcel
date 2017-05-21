@@ -19,7 +19,6 @@ export default function parseMember(value: any): ?Member {
     return null;
   }
 
-  // $FlowFixMe: parsing error due to default values
   const [, name = null, email = null, url = null] = matches;
 
   return {
