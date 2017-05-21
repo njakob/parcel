@@ -18,9 +18,10 @@
   "main": "./lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
+    "build:commithash": "git rev-parse HEAD > .commithash",
     "build:flow": "flow gen-flow-files --out-dir lib src/index.js",
     "build:sources": "babel src -d lib --ignore '*.test.js'",
-    "build": "npm run clean && npm run build:sources && npm run build:flow",
+    "build": "npm run clean && npm run build:commithash && npm run build:sources && npm run build:flow",
     "lint:fix": "eslint --fix .",
     "lint": "eslint .",
     "flow": "flow check",
