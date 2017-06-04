@@ -1,9 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 const presetES2015 = require('babel-preset-es2015');
-const presetFlow = require('babel-preset-flow');
 const presetStage0 = require('babel-preset-stage-0');
 const pluginExternalHelpers = require('babel-plugin-external-helpers');
+const pluginTransformFlowStripTypes = require('babel-plugin-transform-flow-strip-types');
 
 module.exports = function buildPreset() {
   let modules = false;
@@ -20,9 +20,9 @@ module.exports = function buildPreset() {
     presets: [
       presetStage0,
       [presetES2015.buildPreset, { modules }],
-      presetFlow,
     ],
     plugins: [
+      pluginTransformFlowStripTypes,
       externalHelpers && pluginExternalHelpers,
     ].filter(Boolean),
   };

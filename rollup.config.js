@@ -1,10 +1,10 @@
 /* @flow */
 
-import * as fs from 'fs';
-import { hulk } from '@njakob/hulk';
-import rollupNodeResolve from 'rollup-plugin-node-resolve';
-import rollupBabel from 'rollup-plugin-babel';
-import rollupJSON from 'rollup-plugin-json';
+const fs = require('fs');
+const hulk = require('@njakob/hulk');
+const rollupNodeResolve = require('rollup-plugin-node-resolve');
+const rollupBabel = require('rollup-plugin-babel');
+const rollupJSON = require('rollup-plugin-json');
 
 const pkg = JSON.parse(fs.readFileSync('package.json', 'utf-8'));
 
@@ -16,7 +16,7 @@ const commitHash = (() => {
   }
 })();
 
-const banner = hulk({
+const banner = hulk.hulk({
   commitHash,
   name: pkg.name,
   version: pkg.version,
