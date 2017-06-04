@@ -15,6 +15,9 @@
     "parser",
     "helper"
   ],
+  "engines": {
+    "node": ">= 6.0.0"
+  },
   "main": "lib/parcel.js",
   "module": "lib/parcel.es.js",
   "jsnext:main": "lib/parcel.es.js",
