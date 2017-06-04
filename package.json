@@ -21,14 +21,14 @@
   "scripts": {
     "clean": "rimraf lib",
     "build:commithash": "git rev-parse HEAD > .commithash",
-    "build:sources": "rollup -c rollup.config.js",
+    "build:sources": "PRESET=ROLLUP rollup -c rollup.config.js",
     "build:flow": "flow gen-flow-files --out-dir lib src/parcel.js && cpr lib/parcel.js.flow lib/parcel.es.js.flow",
     "build": "npm run clean && npm run build:commithash && npm run build:sources && npm run build:flow",
     "lint:fix": "eslint --fix .",
     "lint": "eslint .",
     "flow": "flow check",
-    "ava:watch": "cross-env MODULES=cjs ava -w",
-    "ava": "cross-env MODULES=cjs ava",
+    "ava:watch": "cross-env PRESET=AVA ava -w",
+    "ava": "cross-env PRESET=AVA ava",
     "test": "npm run lint && npm run flow && npm run ava",
     "release": "standard-version",
     "prepublish": "npm run test && npm run build"
