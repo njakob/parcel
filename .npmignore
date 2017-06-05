@@ -6,4 +6,6 @@ src/
 .eslintrc
 .flowconfig
 .travis.yml
+preset.js
+rollup.config.js
 yarn.lock
