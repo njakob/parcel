@@ -1,22 +1,19 @@
 
-# parcel [![NPM version][badge:npm-status]][npm] [![Build Status][badge:build-status]][travis] [![ESLint Config][badge:eslint-config]][github:njakob/eslint-config] [![Conventional Commits][badge:conventional-commits]][conventional-commits]
+# parcel [![NPM version](https://img.shields.io/npm/v/@njakob/parcel.svg)](https://nodei.co/npm/@njakob/parcel) [![Build Status](https://travis-ci.org/njakob/parcel.svg?branch=master)](https://travis-ci.org/njakob/parcel) [![Dependency Status](https://david-dm.org/njakob/parcel.svg)](https://david-dm.org/njakob/parcel) [![ESLint Config](https://img.shields.io/badge/eslint_config-njakob-463fd4.svg)](https://github.com/njakob/eslint-config) [![Conventional Commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 > NPM package parser.
 
 ## Features
 
 * Flowtype definitions
+* No dependency
+* Simple API
 
 ## Installation
-
-With NPM:
 
 ```
 $ npm install @njakob/parcel
 ```
-
-With Yarn:
-
 ```
 $ yarn add @njakob/parcel
 ```
@@ -24,27 +21,18 @@ $ yarn add @njakob/parcel
 ## Usage
 
 ```js
-import { parseParcel } from '@njakob/parcel';
-import parcel from './package.json';
+import fs from 'fs';
+import * as parcel from '@njakob/parcel';
 
-console.log(parseParcel(parcel));
+const pkg = fs.readFileSync('package.json');
+
+console.log(parcel.parseParcel(pkg));
 ```
 
 ## Changelog
 
-See [changelog][CHANGELOG].
+See [changelog](CHANGELOG.md).
 
 ## Licences
 
-`njakob/parcel` is licensed under the [MIT License][licence].
-
-[changelog]: CHANGELOG
-[licence]: LICENSE
-[github:njakob/eslint-config]: https://github.com/njakob/parcel
-[travis]: https://travis-ci.org/njakob/parcel
-[npm]: https://nodei.co/npm/@njakob/parcel
-[conventional-commits]: https://conventionalcommits.org
-[badge:npm-status]: https://img.shields.io/npm/v/@njakob/parcel.svg
-[badge:build-status]: https://travis-ci.org/njakob/parcel.svg?branch=master
-[badge:eslint-config]: https://img.shields.io/badge/eslint_config-njakob-463fd4.svg
-[badge:conventional-commits]: https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg
+`njakob/parcel` is licensed under the [MIT License](LICENSE).
